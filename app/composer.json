@@ -1,0 +1,16 @@
+{
+    "name": "php_ci_book/blogapp",
+    "authors": [
+        {
+            "name": "soda4708",
+            "email": "soda4708@hotmail.co.jp"
+        }
+    ],
+    "config": {
+        "vendor-dir": "Vendor"
+    },
+    "require": {
+        "cakephp/cakephp": "2.5.*",
+        "josegonzalez/cakephp-environments": "1.0.0"
+    }
+}
