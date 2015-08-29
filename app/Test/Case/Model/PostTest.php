@@ -44,10 +44,9 @@ class PostTest extends CakeTestCase {
 	 * @param $message
 	 */
 	public function testバリデーショエラー($column, $value, $message) {
-		$default = ['title' => 'タイトル', 'body' => '本文'];
-		$this->Post->create(array_merge($default, [ $column => $value ]));
-		$this->assertFalse($this->Post->validates());
-		$this->assertEquals([$message], $this->Post->validationErrors[$column]);
+		$post = Fabricate::build('Post', [$column => $value]);
+		$this->assertFalse($post->validates());
+		$this->assertEquals([$message], $post->validationErrors[$column]);
 	}
 
 	public function exampleValidationErrors() {
