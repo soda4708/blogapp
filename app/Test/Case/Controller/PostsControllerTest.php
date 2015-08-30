@@ -52,7 +52,7 @@ class PostsControllerTest extends ControllerTestCase {
 		$this->controller->Post->expects($this->once())
 			->method('save')->will($this->returnValue(true));
 		$this->controller->Session->expects($this->once())
-			->method('setFlash')->with($this->equalTo('新しい記事を受け付けました'));
+			->method('setFlash')->with($this->equalTo('新しい記事を受け付けました。'));
 		$this->controller->expects($this->once())
 			->method('redirect')->with($this->equalTo(['action' => 'index']));
 		$this->testAction('/blogs/new', ['method' => 'post', 'data' => ['title' =>
