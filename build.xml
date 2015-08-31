@@ -8,7 +8,7 @@
     <property name="basedir" value="${phing.dir}" />
     <property name="appdir" value="${basedir}/app" />
     <property name="logdir" value="${appdir}/tmp/logs" />
-    <property name="vendorbindir" value="${appdir}/VEndor/bin" />
+    <property name="vendorbindir" value="${appdir}/Vendor/bin" />
 
     <!-- Build(1) -->
     <target name="build" depends="prepare,caketest,behat,phpcs,phpmd,phpcpd" />
