@@ -52,7 +52,7 @@
         <exec dir="${basedir}" executable="${vendorbindir}/phpcs" output="${logdir}/phpcs.log">
             <arg line="--config-set" />
             <arg line="installed_paths" />
-            <arg line="${appdir}/Vendor/cakephp/cakephp-codesniffer">
+            <arg line="${appdir}/Vendor/cakephp/cakephp-codesniffer" />
         </exec>
         <exec dir="${basedir}" executable="${vendorbindir}/phpcs" output="${logdir}/phpcs.log">
             <arg line="--ignore=Test,Vendor,Plugin" />
@@ -66,17 +66,17 @@
 
     <!-- PHPMD -->
     <target name="phpmd" description="Perform project mess detection using PHPMD">
-        <exec dir="${basedir}" executable="${vendor-bindir}/phpmd" output="${logdir}/phpmd.log">
+        <exec dir="${basedir}" executable="${vendorbindir}/phpmd" output="${logdir}/phpmd.log">
             <arg line="${appdir}" />
             <arg line="xml" />
             <arg line="codesize,unusedcode,design,naming" />
-            <arg line="--exclude ${appdir}/Test,${appdir}/Vendor,${appdir}/Plugin" />
+            <arg line="--execlude ${appdir}/Test,${appdir}/Vendor,${appdir}/Plugin" />
             <arg line="--reportfile ${appdir}/reports/phpmd.xml" />
 	</exec>
     </target>
 
     <!-- PHPCPD -->
-    <targete name="phpcpd" description="Perform project mess detection using PHPMD">
+    <target name="phpcpd" description="Perform project mess detection using PHPMD">
         <exec dir="${basedir}" executable="${vendorbindir}/phpcpd" output="${logdir}/phpcpd.log">
             <arg line="--execlude Vendor" />
             <arg line="--execlude Plugin" />
@@ -85,6 +85,6 @@
             <arg line="--names *.php,*.cpt" />
             <arg line="${appdir}" />
         </exec>
-    </traget>
+    </target>
 
 </project>
