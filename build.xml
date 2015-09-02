@@ -70,9 +70,9 @@
             <arg line="${appdir}" />
             <arg line="xml" />
             <arg line="codesize,unusedcode,design,naming" />
-            <arg line="--execlude ${appdir}/Test,${appdir}/Vendor,${appdir}/Plugin" />
+            <arg line="--exclude ${appdir}/Test,${appdir}/Vendor,${appdir}/Plugin" />
             <arg line="--reportfile ${appdir}/reports/phpmd.xml" />
-	</exec>
+	    </exec>
     </target>
 
     <!-- PHPCPD -->
