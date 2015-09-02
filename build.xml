@@ -78,9 +78,9 @@
     <!-- PHPCPD -->
     <target name="phpcpd" description="Perform project mess detection using PHPMD">
         <exec dir="${basedir}" executable="${vendorbindir}/phpcpd" output="${logdir}/phpcpd.log">
-            <arg line="--execlude Vendor" />
-            <arg line="--execlude Plugin" />
-            <arg line="--execlude webroot" />
+            <arg line="--exclude Vendor" />
+            <arg line="--exclude Plugin" />
+            <arg line="--exclude webroot" />
             <arg line="--log-pmd ${appdir}/reports/phpcpd.xml" />
             <arg line="--names *.php,*.cpt" />
             <arg line="${appdir}" />
